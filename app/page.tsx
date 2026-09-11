@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowRight, Check, ChevronDown, Menu, Play, X } from "lucide-react";
 
 const products = [
-  { slug: "cacao", name: "Cacao", origin: "Fèves de cacao brutes", image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85", tint: "cacao" },
-  { slug: "cafe-vert", name: "Café vert", origin: "Grains de café robusta", image: "https://source.unsplash.com/featured/1200x1500/?green,coffee,beans", tint: "coffee" },
-  { slug: "anacarde", name: "Anacarde", origin: "Noix d’anacarde brutes", image: "https://source.unsplash.com/featured/1200x1500/?cashew,nuts", tint: "cacao" },
+  { slug: "cacao", name: "Cacao", origin: "Fèves de cacao brutes", image: "https://unsplash.com/photos/jF3zJ1EFuNM/download?force=true&w=1200", tint: "cacao" },
+  { slug: "cafe-vert", name: "Café vert", origin: "Grains de café robusta", image: "https://unsplash.com/photos/TD4DBagg2wE/download?force=true&w=1200", tint: "coffee" },
+  { slug: "anacarde", name: "Anacarde", origin: "Noix d’anacarde brutes", image: "https://unsplash.com/photos/nYuO4NBH0xc/download?force=true&w=1200", tint: "cacao" },
 ];
 
 function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {

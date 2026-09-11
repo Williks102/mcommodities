@@ -1,9 +1,9 @@
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
 const catalogue = {
-  cacao: { name: "Cacao", label: "Fèves de cacao brutes", image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1800&q=90", quote: "Une matière profonde, née de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Fèves de cacao brutes"], ["Disponibilité", "Selon campagne et lots"]] },
-  "cafe-vert": { name: "Café vert", label: "Grains de café robusta", image: "https://source.unsplash.com/featured/1800x1200/?green,coffee,beans", quote: "Le caractère franc du robusta, directement issu de son terroir.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Grains de café vert"], ["Préparation", "Voie sèche"]] },
-  anacarde: { name: "Anacarde", label: "Noix d’anacarde brutes", image: "https://source.unsplash.com/featured/1800x1200/?cashew,nuts", quote: "Une graine généreuse, issue de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Noix d’anacarde brutes"], ["Disponibilité", "Selon campagne et lots"]] },
+  cacao: { name: "Cacao", label: "Fèves de cacao brutes", image: "https://unsplash.com/photos/jF3zJ1EFuNM/download?force=true&w=1800", quote: "Une matière profonde, née de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Fèves de cacao brutes"], ["Disponibilité", "Selon campagne et lots"]] },
+  "cafe-vert": { name: "Café vert", label: "Grains de café robusta", image: "https://unsplash.com/photos/TD4DBagg2wE/download?force=true&w=1800", quote: "Le caractère franc du robusta, directement issu de son terroir.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Grains de café vert"], ["Préparation", "Voie sèche"]] },
+  anacarde: { name: "Anacarde", label: "Noix d’anacarde brutes", image: "https://unsplash.com/photos/nYuO4NBH0xc/download?force=true&w=1800", quote: "Une graine généreuse, issue de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Noix d’anacarde brutes"], ["Disponibilité", "Selon campagne et lots"]] },
 } as const;
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {

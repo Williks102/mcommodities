@@ -1,9 +1,9 @@
 import { ArrowLeft, ArrowRight, Check } from "lucide-react";
 
 const catalogue = {
-  cacao: { name: "Cacao", label: "Fèves sélectionnées", image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1800&q=90", quote: "Une matière profonde, née de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Préparation", "Fermentation & séchage contrôlés"], ["Disponibilité", "Selon campagne et lots"]] },
-  "cafe-vert": { name: "Café vert", label: "Robusta de Côte d’Ivoire", image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=90", quote: "Le caractère franc du robusta, travaillé avec précision.", details: [["Origine", "Côte d’Ivoire"], ["Variété", "Robusta"], ["Préparation", "Voie sèche"]] },
-  anacarde: { name: "Anacarde", label: "Noix de cajou brutes", image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1800&q=90", quote: "Une graine généreuse, issue de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Noix de cajou brutes"], ["Disponibilité", "Selon campagne et lots"]] },
+  cacao: { name: "Cacao", label: "Fèves de cacao brutes", image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1800&q=90", quote: "Une matière profonde, née de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Fèves de cacao brutes"], ["Disponibilité", "Selon campagne et lots"]] },
+  "cafe-vert": { name: "Café vert", label: "Grains de café robusta", image: "https://source.unsplash.com/featured/1800x1200/?green,coffee,beans", quote: "Le caractère franc du robusta, directement issu de son terroir.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Grains de café vert"], ["Préparation", "Voie sèche"]] },
+  anacarde: { name: "Anacarde", label: "Noix d’anacarde brutes", image: "https://source.unsplash.com/featured/1800x1200/?cashew,nuts", quote: "Une graine généreuse, issue de terroirs vivants.", details: [["Origine", "Côte d’Ivoire"], ["Produit", "Noix d’anacarde brutes"], ["Disponibilité", "Selon campagne et lots"]] },
 } as const;
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {

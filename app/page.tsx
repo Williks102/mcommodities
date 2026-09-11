@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { ArrowDownRight, ArrowRight, Check, ChevronDown, Menu, Play, X } from "lucide-react";
 
 const products = [
-  { slug: "cacao", name: "Cacao", origin: "Fèves sélectionnées", image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85", tint: "cacao" },
-  { slug: "cafe-vert", name: "Café vert", origin: "Robusta de Côte d’Ivoire", image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85", tint: "coffee" },
-  { slug: "anacarde", name: "Anacarde", origin: "Noix de cajou brutes", image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1200&q=85", tint: "cacao" },
+  { slug: "cacao", name: "Cacao", origin: "Fèves de cacao brutes", image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85", tint: "cacao" },
+  { slug: "cafe-vert", name: "Café vert", origin: "Grains de café robusta", image: "https://source.unsplash.com/featured/1200x1500/?green,coffee,beans", tint: "coffee" },
+  { slug: "anacarde", name: "Anacarde", origin: "Noix d’anacarde brutes", image: "https://source.unsplash.com/featured/1200x1500/?cashew,nuts", tint: "cacao" },
 ];
 
 function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {

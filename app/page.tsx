@@ -6,7 +6,7 @@ import { ArrowDownRight, ArrowRight, Check, ChevronDown, Menu, Play, X } from "l
 const products = [
   { slug: "cacao", name: "Cacao", origin: "Fèves sélectionnées", image: "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=1200&q=85", tint: "cacao" },
   { slug: "cafe-vert", name: "Café vert", origin: "Robusta de Côte d’Ivoire", image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=85", tint: "coffee" },
-  { slug: "cafe-moulu", name: "Café moulu", origin: "Torréfié sur place", image: "https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1200&q=85", tint: "coffee" },
+  { slug: "anacarde", name: "Anacarde", origin: "Noix de cajou brutes", image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1200&q=85", tint: "cacao" },
 ];
 
 function Reveal({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -26,9 +26,9 @@ export default function Home() {
     <header className="site-header">
       <div className="utility"><span>Origine Côte d’Ivoire</span><span className="utility-dot"/><span>Récolte · sourcing · export</span><a href="#contact">Espace partenaires <ArrowRight size={13}/></a></div>
       <div className="nav-shell">
-        <a href="#top" className="brand" aria-label="Moses Commodities, accueil"><span className="brand-mark">M</span><span><b>MOSES</b><i>COMMODITIES</i></span></a>
+        <a href="#top" className="brand" aria-label="Moses Commodities, accueil"><img src="/logo-moses.svg" alt=""/><span><b>MOSES</b><i>COMMODITIES</i></span></a>
         <nav className="desktop-nav"><a href="#maison">La maison</a><a href="#produits">Nos collections</a><a href="#savoir-faire">Savoir-faire</a><a href="#impact">Impact</a></nav>
-        <a className="nav-contact" href="#contact">Nous contacter <ArrowDownRight size={16}/></a>
+        <a className="nav-contact" href="#contact">Demandez un devis <ArrowDownRight size={16}/></a>
         <button className="mobile-toggle" aria-label="Ouvrir le menu" onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
       </div>
       {open && <nav className="mobile-nav"><a onClick={close} href="#maison">La maison</a><a onClick={close} href="#produits">Nos collections</a><a onClick={close} href="#savoir-faire">Savoir-faire</a><a onClick={close} href="#impact">Impact</a><a onClick={close} href="#contact">Nous contacter</a></nav>}
@@ -37,7 +37,7 @@ export default function Home() {
     <section id="top" className="hero">
       <div className="hero-image"/>
       <div className="hero-shade"/>
-      <div className="hero-copy"><div className="hero-kicker">Maison de cacao & café <span>•</span> Depuis la terre ivoirienne</div><h1>La nature,<br/><em>mise en œuvre.</em></h1><p>Une maison de sourcing qui révèle la richesse du cacao et du café ivoiriens, du geste des producteurs jusqu’aux marchés du monde.</p><div className="hero-actions"><a className="button light" href="#produits">Explorer la collection <ArrowRight size={17}/></a><a className="play-link" href="#maison"><span><Play fill="currentColor" size={12}/></span> Notre histoire</a></div></div>
+      <div className="hero-copy"><div className="hero-kicker">Cacao, café & anacarde <span>•</span> Depuis la terre ivoirienne</div><h1>La nature,<br/><em>mise en œuvre.</em></h1><p>Une maison de sourcing qui révèle la richesse des matières brutes ivoiriennes — fèves, grains et graines — du geste des producteurs jusqu’aux marchés du monde.</p><div className="hero-actions"><a className="button light" href="#produits">Explorer la collection <ArrowRight size={17}/></a><a className="play-link" href="#maison"><span><Play fill="currentColor" size={12}/></span> Notre histoire</a></div></div>
       <div className="hero-side"><span>01 — 03</span><div/><span>Faire grandir<br/>l’exception</span></div><a href="#maison" className="scroll-cue">Défiler <ChevronDown size={16}/></a>
     </section>
 
@@ -57,7 +57,7 @@ export default function Home() {
 
     <section className="journal section-pad"><Reveal><p className="eyebrow">Carnet de récolte</p><h2>Le temps long est<br/><em>notre plus belle matière.</em></h2></Reveal><Reveal className="journal-art"><div className="journal-image"/><div><span>Terroirs de l’Ouest ivoirien</span><h3>De la parcelle à la coopérative, une chaîne de confiance.</h3><a className="text-link" href="#contact">Lire le récit <ArrowRight size={16}/></a></div></Reveal></section>
 
-    <section id="contact" className="contact"><div className="contact-bg"/><div className="contact-copy"><p className="eyebrow">Échangeons</p><h2>Donner forme à<br/><em>votre prochain lot.</em></h2><p>Parlez-nous de vos volumes, de vos spécifications et de vos ambitions.</p></div><form onSubmit={(e) => e.preventDefault()}><label>Votre nom<input placeholder="Nom et société" required/></label><label>Votre e-mail<input type="email" placeholder="bonjour@entreprise.com" required/></label><label>Votre besoin<select defaultValue=""><option value="" disabled>Choisir une matière</option><option>Cacao</option><option>Café vert</option><option>Café moulu</option></select></label><button className="button dark">Envoyer la demande <ArrowRight size={17}/></button></form></section>
-    <footer><a className="brand" href="#top"><span className="brand-mark">M</span><span><b>MOSES</b><i>COMMODITIES</i></span></a><p>© {new Date().getFullYear()} Moses Commodities — Côte d’Ivoire</p><div><a href="#maison">La maison</a><a href="#produits">Collections</a><a href="#contact">Contact</a></div></footer>
+    <section id="contact" className="contact"><div className="contact-bg"/><div className="contact-copy"><p className="eyebrow">Échangeons</p><h2>Donner forme à<br/><em>votre prochain lot.</em></h2><p>Parlez-nous de vos volumes, de vos spécifications et de vos ambitions.</p></div><form onSubmit={(e) => e.preventDefault()}><label>Votre nom<input placeholder="Nom et société" required/></label><label>Votre e-mail<input type="email" placeholder="bonjour@entreprise.com" required/></label><label>Votre besoin<select defaultValue=""><option value="" disabled>Choisir une matière</option><option>Cacao</option><option>Café vert</option><option>Anacarde</option></select></label><button className="button dark">Envoyer la demande <ArrowRight size={17}/></button></form></section>
+    <footer><a className="brand" href="#top"><img src="/logo-moses.svg" alt=""/><span><b>MOSES</b><i>COMMODITIES</i></span></a><p>© {new Date().getFullYear()} Moses Commodities — Côte d’Ivoire</p><div><a href="#maison">La maison</a><a href="#produits">Collections</a><a href="#contact">Contact</a></div></footer>
   </main>;
 }

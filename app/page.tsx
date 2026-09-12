@@ -27,11 +27,11 @@ export default function Home() {
       <div className="utility"><span>Origine Côte d’Ivoire</span><span className="utility-dot"/><span>Récolte · sourcing · export</span><a href="#contact">Espace partenaires <ArrowRight size={13}/></a></div>
       <div className="nav-shell">
         <a href="#top" className="brand" aria-label="Moses Commodities, accueil"><img src="/logo-moses.svg" alt=""/><span><b>MOSES</b><i>COMMODITIES</i></span></a>
-        <nav className="desktop-nav"><a href="#maison">La maison</a><a href="#produits">Nos collections</a><a href="#savoir-faire">Savoir-faire</a><a href="#impact">Impact</a></nav>
+        <nav className="desktop-nav"><a href="#maison">La coopérative</a><a href="#produits">Produits</a><a href="#quality">Qualité</a><a href="#impact">Durabilité</a></nav>
         <a className="nav-contact" href="#contact">Demandez un devis <ArrowDownRight size={16}/></a>
         <button className="mobile-toggle" aria-label="Ouvrir le menu" onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</button>
       </div>
-      {open && <nav className="mobile-nav"><a onClick={close} href="#maison">La maison</a><a onClick={close} href="#produits">Nos collections</a><a onClick={close} href="#savoir-faire">Savoir-faire</a><a onClick={close} href="#impact">Impact</a><a onClick={close} href="#contact">Nous contacter</a></nav>}
+      {open && <nav className="mobile-nav"><a onClick={close} href="#maison">La coopérative</a><a onClick={close} href="#produits">Produits</a><a onClick={close} href="#quality">Qualité</a><a onClick={close} href="#impact">Durabilité</a><a onClick={close} href="#contact">Demandez un devis</a></nav>}
     </header>
 
     <section id="top" className="hero">
@@ -41,8 +41,10 @@ export default function Home() {
       <div className="hero-side"><span>01 — 03</span><div/><span>Faire grandir<br/>l’exception</span></div><a href="#maison" className="scroll-cue">Défiler <ChevronDown size={16}/></a>
     </section>
 
+    <section className="signature-stats"><div><b>3 427</b><span>producteurs membres</span></div><div><b>11 417 ha</b><span>superficie cultivée</span></div><div><b>10 421 T</b><span>cacao / an*</span></div><div><b>625 T</b><span>café / an*</span></div></section>
+
     <section id="maison" className="intro section-pad">
-      <Reveal className="intro-number">01</Reveal><Reveal><p className="eyebrow">L’essence Moses</p><h2>Le goût d’une origine.<br/><em>La force d’un collectif.</em></h2></Reveal><Reveal className="intro-text"><p>Nous sommes une coopérative ivoirienne animée par une conviction simple : les plus belles matières naissent de relations durables avec celles et ceux qui les cultivent.</p><a className="text-link" href="#savoir-faire">Découvrir notre modèle <ArrowRight size={16}/></a></Reveal>
+      <Reveal className="intro-number">01</Reveal><Reveal><p className="eyebrow">Qui sommes-nous ?</p><h2>Une coopérative ivoirienne,<br/><em>au cœur des filières.</em></h2></Reveal><Reveal className="intro-text"><p>Moses Commodities accompagne les producteurs dans la production, la collecte et la commercialisation de cacao, café et anacarde. Notre modèle repose sur une relation de proximité, une chaîne de valeur structurée et une exigence constante de qualité.</p><a className="text-link" href="#savoir-faire">Découvrir notre modèle <ArrowRight size={16}/></a></Reveal>
     </section>
 
     <section id="produits" className="collections section-pad">
@@ -53,7 +55,11 @@ export default function Home() {
 
     <section id="savoir-faire" className="craft"><div className="craft-photo"/><div className="craft-content section-pad"><Reveal><p className="eyebrow">Du champ au quai</p><h2>La rigueur,<br/><em>à chaque geste.</em></h2><p>Notre présence sur le terrain nous permet de veiller à chaque étape : accompagnement, collecte, fermentation, séchage, contrôle et expédition.</p></Reveal><Reveal className="steps">{[["01","Cultiver","Accompagner les producteurs au rythme des saisons."],["02","Préparer","Révéler le potentiel de chaque récolte."],["03","Transmettre","Acheminer des lots prêts pour vos exigences."]].map(([n,t,d]) => <div key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p></div>)}</Reveal></div></section>
 
+    <section id="quality" className="quality section-pad"><Reveal><p className="eyebrow">Qualité & traçabilité</p><h2>La qualité commence<br/><em>à la plantation.</em></h2></Reveal><Reveal className="quality-copy"><p>Notre démarche repose sur une meilleure connaissance de l’origine des produits, des processus de collecte et de contrôle, ainsi que sur l’amélioration continue de nos pratiques.</p>{["Traçabilité des producteurs et des lots", "Contrôle qualité adapté aux produits bruts", "Conformité avec les exigences des marchés", "Accompagnement et amélioration continue"].map(item=><div className="quality-point" key={item}><Check size={15}/><span>{item}</span></div>)}<aside><b>Standards & certifications</b><span>Rainforest Alliance et Fairtrade selon les produits, les lots concernés et les exigences applicables.</span></aside></Reveal></section>
+
     <section id="impact" className="impact section-pad"><Reveal><p className="eyebrow">Un impact enraciné</p><h2>Prendre soin<br/><em>de ce qui nous relie.</em></h2></Reveal><div className="impact-grid"><Reveal className="impact-statement"><span>«</span><p>La qualité d’une matière commence par la qualité de vie de celles et ceux qui la font naître.</p></Reveal><Reveal className="impact-data"><div><b>3 427</b><span>producteurs engagés</span></div><div><b>11 417</b><span>hectares cultivés</span></div><div><b>4</b><span>zones d’intervention</span></div></Reveal></div><Reveal><a href="#contact" className="text-link pale">Notre engagement durable <ArrowRight size={16}/></a></Reveal></section>
+
+    <section id="zones" className="zones section-pad"><Reveal><p className="eyebrow">Nos zones d’intervention</p><h2>Au cœur des territoires<br/><em>agricoles ivoiriens.</em></h2><p>Notre réseau s’étend notamment dans les départements de Duékoué, Guiglo, Bloléquin et Toulepleu. Notre siège est situé à Doba, dans le département de San-Pédro.</p></Reveal><Reveal className="zone-card"><span>04 zones</span><b>Duékoué · Guiglo<br/>Bloléquin · Toulepleu</b><small>Doba — San-Pédro, Côte d’Ivoire</small></Reveal></section>
 
     <section className="journal section-pad"><Reveal><p className="eyebrow">Carnet de récolte</p><h2>Le temps long est<br/><em>notre plus belle matière.</em></h2></Reveal><Reveal className="journal-art"><div className="journal-image"/><div><span>Terroirs de l’Ouest ivoirien</span><h3>De la parcelle à la coopérative, une chaîne de confiance.</h3><a className="text-link" href="#contact">Lire le récit <ArrowRight size={16}/></a></div></Reveal></section>
 
